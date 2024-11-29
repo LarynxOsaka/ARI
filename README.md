@@ -1,8 +1,10 @@
 # ARI
 Acoustic Roughness Index scripts activated in Praat software.
 
-This repository contains the ARI custom script designed for use with Praat, a free acoustic analysis software.　　 
-This script enables users to analyze acoustic parameters from continuous speech and sustained vowel audio files.　　 
+This repository contains the ARI custom script designed for use with Praat, a free acoustic analysis software.
+
+This script enables users to analyze acoustic parameters from continuous speech and sustained vowel audio files.
+
 Below are step-by-step instructions to help you get started.　　
 
 # Prerequisites
