@@ -509,7 +509,7 @@ selectObject: "Ltas 'namedefo$'_SubhSearchFrame_'ii'"
 
 
 
-#SubhSearchFrameをそれぞれ、下記Subhに分類
+#Classify each SubhSearchFrame into the following Subh
  #subhType_'ii' = 0 :　Default state, adapted in the silent part
  #subhType_'ii' = 1 :　Default state, adapted in the silent part
  #subhType_'ii' = 2 :　Frame in which 1/2Subharmonics exists 　　(3)Test order
