@@ -18,7 +18,7 @@ comment ▼Differential value of dB judged as a silent frame
 comment ▼Differential values of dB determined as frames containing harmonics
   real   noHarmonics_lower_than_frame 20
 
-comment ▼Subharmonicsサーチするフレームを描出---------------------------------------
+comment ▼SubharmonicsDraw frames to search---------------------------------------
   boolean draw_subh_search_frame 1
 
 comment ▼DualOscillator peak threshold (dB)
@@ -28,12 +28,12 @@ comment ▼DualOscillator peak threshold (dB)
 comment ▼Quantification Preservation
 sentence Title_of_table Table_of_SUBHARMONICS_Index
 #sentence Save_directory C:\Apps\Praat\Result
-sentence Save_directory /Users/kitayamaitsuki/Desktop/Praat練習用/DualOscillatorIndex
+sentence Save_directory /Users/username/Desktop/foldername/filemame
 comment ▼Drawing the calculation results as a figure
   boolean draw_Results 1
 comment ▼Spectrogram storage
     #sentence Save_directory C:\Apps\Praat\Result
-    sentence Save_directory /Users/kitayamaitsuki/Desktop/Result
+    sentence Save_directory /Users/username/Desktop/Result
 endform
 ########################################################################
 
