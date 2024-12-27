@@ -15,6 +15,20 @@ Select the version compatible with your operating system (Windows, macOS, or Lin
 
 Download and install the software following the provided instructions.　
 
+### 1. System requirements
+Operating Systems:
+Windows 7/8/10/11
+macOS 10.10 or later
+Linux (any distribution with GTK+)
+
+### 2. Installation guideInstructions
+Typical Installation Time:
+Less than 2 minutes on a standard desktop computer.
+  
+### 3. DemoInstructions to run on data
+Expected Run Time:
+Analysis of a typical 20-second audio file: Less than 30 seconds on a standard desktop computer.
+
 ## Prepare the audio files:
 Ensure you have the required audio files ready for analysis:
 
@@ -56,18 +70,6 @@ The script will generate:　　
 
 
 
-### 1. System requirements
-Operating Systems:
-Windows 7/8/10/11
-macOS 10.10 or later
-Linux (any distribution with GTK+)
 
-### 2. Installation guideInstructions
-Typical Installation Time:
-Less than 2 minutes on a standard desktop computer.
-  
-### 3. DemoInstructions to run on data
-Expected Run Time:
-Analysis of a typical 20-second audio file: Less than 30 seconds on a standard desktop computer.
  
 
