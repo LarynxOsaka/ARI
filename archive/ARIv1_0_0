@@ -1,4 +1,5 @@
-########################################################################
+##### ARI Praat Script v1.0.0 (Old Version)
+#################################################
 form ARI based on SFEEDS ver.1 (cs＋sv)
 #sample name　= yyyymmddXXX0000F(orM)_cs / yyyymmddXXX0000(orM)_sv
 comment Object number of sound files.          Continuous speech           Sustained vowel
