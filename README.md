@@ -1,4 +1,4 @@
-#📄 **Reference Publication**  
+# 📄 **Reference Publication**  
 Kitayama I, Hosokawa K, et al. *A Multivariate Model Incorporating Subharmonic Measurements for Evaluating Vocal Roughness*.  
 npj Digital Medicine 2025 May 20;8(1):295.
 [https://doi.org/10.1038/s41746-025-01702-2](https://doi.org/10.1038/s41746-025-01702-2)  
