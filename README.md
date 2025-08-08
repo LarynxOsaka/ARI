@@ -1,6 +1,6 @@
 # **📢 Latest Release**
 
-The latest version of the ARI Praat Script is **[v1.1.0 (2025-08-08)](https://[github.com/LarynxOsaka/ARI/releases/latest)**.
+The latest version of the ARI Praat Script is **[v1.1.0 (2025-08-08)](https://github.com/LarynxOsaka/ARI/releases/latest)**.
 
 Please always download from this link to ensure you are using the most up-to-date version.
 
