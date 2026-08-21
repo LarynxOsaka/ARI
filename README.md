@@ -111,3 +111,4 @@ Automated preprocessing and output improvements.
 ## Note
 
 ARI v1.2.0 remains based on the ARI v1 framework and SFEEDS v1.1.0. Major methodological updates are reserved for future versions.
+ARI v1.2.0 was numerically validated against v1.1.1 using a 30-sample validation set, with identical outputs across all evaluated acoustic parameters.
