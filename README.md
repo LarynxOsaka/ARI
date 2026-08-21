@@ -1,86 +1,113 @@
+# Acoustic Roughness Index (ARI)
 # 📄 **Reference Publication**  
 Kitayama I, Hosokawa K, et al. *A Multivariate Model Incorporating Subharmonic Measurements for Evaluating Vocal Roughness*. npj Digital Medicine 2025 May 20;8(1):295.
 [https://doi.org/10.1038/s41746-025-01702-2](https://doi.org/10.1038/s41746-025-01702-2)  
 
 # **📢 Latest Release**
 
-The latest version of the ARI Praat Script is **[v1.1.0 (2025-08-08)](https://github.com/LarynxOsaka/ARI/releases/latest)**.
+## Version 1.2.0
 
-Please always download from this link to ensure you are using the most up-to-date version.
+**Release date:** 2026-08-21
 
----
-# ARI
-Acoustic Roughness Index scripts activated in Praat software.
+ARI is a Praat-based acoustic analysis tool for the objective assessment of perceived vocal roughness.
 
-This repository contains the ARI custom script designed for use with Praat, a free acoustic analysis software.
+Version 1.2.0 is a **workflow and batch-processing update** based on ARI v1.1.1. The release improves usability, file handling, batch safety, result output, and Praat object management while retaining the ARI v1 analysis framework.
 
-This script enables users to analyze acoustic parameters from continuous speech and sustained vowel audio files.
+## Requirements
 
-Below are step-by-step instructions to help you get started.　　
+- Praat
+- Continuous speech recording (CS)
+- Sustained vowel recording (SV)
 
-# Prerequisites
-## Download and install Praat:
-Visit the Praat website. (https://www.fon.hum.uva.nl/praat/)
+Input audio is automatically standardized when necessary, including resampling to 44.1 kHz, channel selection, and standardized SV extraction.
 
-Select the version compatible with your operating system (Windows, macOS, or Linux).　　
+## Analysis modes
 
-Download and install the software following the provided instructions.　
+### Single pair
 
-### 1. System requirements
-Operating Systems:
-Windows 7/8/10/11
-macOS 10.10 or later
-Linux (any distribution with GTK+)
+Use this mode to analyze one CS–SV pair already loaded in the Praat Objects window.
 
-### 2. Installation guideInstructions
-Typical Installation Time:
-Less than 2 minutes on a standard desktop computer.
-  
-### 3. DemoInstructions to run on data
-Expected Run Time:
-Analysis of a typical 20-second audio file: Less than 30 seconds on a standard desktop computer.
+- Select the CS and SV by their Sound object numbers.
+- CS and SV filenames do **not** have to match.
+- SampleID is optional.
+- Existing Praat objects are preserved.
 
-## Prepare the audio files:
-Ensure you have the required audio files ready for analysis:
+### Batch
 
-・Continuous Speech Audio File
+Use this mode for folder-based analysis.
 
-・Sustained Vowel Audio File
+- Select a folder containing CS WAV files.
+- Select a separate folder containing SV WAV files.
+- The first 16 filename characters are used as the SampleID.
+- Exactly one CS and one SV must exist for each SampleID.
 
-Voice samples should be recorded in an acoustically treated room and stored as a digitised WAV. format with a sampling rate of 44.1 kHz and 16-bit resolution using a head-mounted microphone, and meet the generally required level of signal-to-noise ratio (>30 dB). 
+Before analysis, ARI performs a **preflight check** of all file pairs. If any mismatch or duplicate is found, analysis is not started and a preflight report is generated.
 
-These should be from the same patient to ensure consistency in the analysis.
+## Batch progress
 
-# How to Use ARI in Praat
-## Open the audio files in Praat:
-Launch Praat.
+During Batch analysis, the Praat Info window is updated in place to show the current pair, progress, and remaining analyses.
 
-Go to Open > Read from file in the menu to load your audio files (both Continuous Speech and Sustained Vowel files).
+A completion dialog is shown after both Single and Batch runs.
 
-## Run the ARI script:
-In Praat, click on Praat > New Praat Script > Paste the ARI script > 
+## Output
 
-Once the script is loaded, press the Run button in the script editor to start the process.
+Results are saved as:
 
-## Input parameters in the ARI script:
-Enter the following details in the pop-up dialog box:
+```text
+<ResultName>.tsv
+```
 
-Objects number: The numbers assigned to the Continuous Speech and Sustained Vowel files in the Praat Objects window.
+The file contains one header row followed by one row per analysis.
 
-Number of patients: Input 1 if analyzing data for a single patient.
+The first columns include:
 
-Save directory: Specify the directory where the analysis results should be saved.
+```text
+SampleID
+CS_FileName
+SV_FileName
+ARI
+ABI
+...
+```
 
-Click OK after entering all parameters.
+A separate analysis log is saved automatically as:
 
-The script will generate:　　
+```text
+<ResultName>_log.tsv
+```
 
-・Excel file: Lists values for each analyzed parameter.　
+A preflight report is created only when Batch pairing fails.
 
-・PNG file: Visual representation of the analysis results.　
+## Object handling
 
+ARI v1.2.0 preserves objects that were already present in the Praat Objects window before analysis. Temporary objects created during processing are cleaned up automatically.
 
+Internal CS/SV handling has also been optimized to improve consistency across different input sampling rates and file configurations.
 
+## Main changes from v1.1.1
 
- 
+- Added **Single pair** and **Batch** modes.
+- Added folder-based Batch processing.
+- Added strict preflight pairing before Batch analysis.
+- Added live, non-scrolling progress display.
+- Added completion dialogs.
+- Added result-linked analysis logs.
+- Improved TSV output and filename tracking.
+- Improved preservation of existing Praat objects.
+- Optimized internal CS/SV processing.
+- Consolidated distribution into a single Praat script.
 
+## Version history
+
+### v1.2.0 — 2026-08-21
+Workflow and batch-processing update.
+
+### v1.1.1 — 2026-08-21
+Maintenance and bug-fix release.
+
+### v1.1.0 — 2025-08-08
+Automated preprocessing and output improvements.
+
+## Note
+
+ARI v1.2.0 remains based on the ARI v1 framework and SFEEDS v1.1.0. Major methodological updates are reserved for future versions.
